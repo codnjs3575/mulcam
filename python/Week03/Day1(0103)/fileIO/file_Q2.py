@@ -7,21 +7,19 @@ file_name2 = '/Users/chaewon/python/save_list_num.txt'
 open_file = open(file_name,'r')
 
 if not pa.exists(file_name2):
-    print('hi')
-    new_file = open(file_name2, 'w')  # 덮어쓰기까지 가능
+    new_file = open(file_name2, 'w')
     new_file.close()
-
 
 def sum(f,file_name2) :
     val_arr = f.readlines()
-    if val_arr != '\n':
-        f2 = open(file_name2, 'w')
-        for val in val_arr:
-            if val != '\n':
-                sum = 0
-                num = val.split(' ')
-                sum = float(num[0]) + float(num[1])
-                f2.write(num[0] + '+' + num[1].replace("\n","") + '=' + str(sum)+'\n')
-        f2.close()
+    f2 = open(file_name2, 'w')
+    for val in val_arr:
+        if val != '\n':
+            sum = 0
+            num = val.split(' ')
+            sum = float(num[0]) + float(num[1])
+            f2.write(num[0] + '+' + num[1].replace("\n","") + '=' + str(sum)+'\n')
+    f2.close()
 
 sum(open_file,file_name2)
+open_file.close()

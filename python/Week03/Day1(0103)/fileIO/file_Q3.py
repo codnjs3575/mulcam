@@ -19,14 +19,14 @@ def output_member(f_out):
     
 
 while True:
-    input_no = int(input('저장 1, 출력 2, 종료 q : ')) 
-    if input_no == 1:
+    input_no = input('저장 1, 출력 2, 종료 q : ')
+    if input_no == '1':
         input_file = input('멤버 명단을 저장할 파일명을 입력하세요. : ')
         input_member(input_file)
-    elif input_no == 2:
+    elif input_no == '2':
         output_file = input('멤버 명단이 저장된 파일명을 입력하세요. : ')
         output_member(output_file)
-    elif str(input_no) == 'q':
+    elif input_no == 'q':
         break
     else :
         print('잘못 입력하셨습니다. 다시 입력해주세요.')

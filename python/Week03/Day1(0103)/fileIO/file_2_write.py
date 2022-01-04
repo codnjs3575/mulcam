@@ -16,4 +16,3 @@ for i in range(1,11):
 
 f.close()
 
-# 2. read : 파일 읽기
