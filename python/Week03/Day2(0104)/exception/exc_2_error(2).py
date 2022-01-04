@@ -18,7 +18,7 @@ except ZeroDivisionError as e: # e = 에러 메세지 변수 (에러 내용 출�
 
 # 예제) TypeError
 try :
-    print('나이: '+23 + '살')
+    print('나이: '+ 23 + '살')
 except:
     print('오류 발생')
 
@@ -33,7 +33,8 @@ else :
 # 예제) UnboundLocalError
 try :
     def add():
-        a = a+1
+        # a = a+1
+        pass
     add()
 except UnboundLocalError as e:
     print('에러 발생 =>',e)
@@ -43,7 +44,7 @@ except UnboundLocalError as e:
 # 경우 1) 하나만 출력
 try :
     print(10/0)
-    print('나이: '+23 + '살')
+    print('나이: '+ 23 + '살')
 except TypeError as e:
     print('형식이 잘못 지정되었습니다.',e)
 except ZeroDivisionError as e:
@@ -51,6 +52,19 @@ except ZeroDivisionError as e:
 
 try :
     print(10/0)
-    print('나이: '+23 + '살')
+    print('나이: '+ 23 + '살')
 except (TypeError,ZeroDivisionError) as e:
     print('형식이 잘못 지정되었습니다.',e)
+    print('-'*50)
+
+
+try :
+    f = open('test.txt','r')
+except FileNotFoundError :
+    print('파일이 발견되지 않았습니다.')
+else :
+    data = f.read()
+    print(data)
+    f.close()
+finally:
+    print('end')

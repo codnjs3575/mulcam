@@ -10,5 +10,5 @@ if not pa.isdir('log'):
     os.mkdir('log')
 else :
     print('already exist')
-    pass
+
 
