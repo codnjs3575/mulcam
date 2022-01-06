@@ -1,8 +1,31 @@
 > 01/06 ~ 
+>
+> www.numpy.org
 # 1. numpy 모듈 선언
 
-# 2. Array 정의 및 사용
-## 1. array 생성
+- 새로운 노트북을 실행한 경우 다시 선언해야 함
+
+   ```python
+    import numpy as np
+   ```
+   ```python
+     np.__version__ #'1.20.3'
+   ```
+
+
+
+## 2. Array 정의 및 사용
+- 시퀀스 데이터(리스트,튜플 등)로부터 배열 생성
+- http://numpy.org/doc/stable/reference/arrays.html
+
+## 1. array 생성 (object)
+
+`형식` : arr_obj = np.array(seq_data)
+
+```python
+data1 = [1,2,3]
+data1  # [1,2,3]
+```
 
 
 
