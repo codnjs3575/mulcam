@@ -279,14 +279,14 @@ list1 = [1,2,3,4]
 list2 = [10,20,30,40]
 
 # 방법 1) def 함수 사용
-new_list = []
-
-def sum_lists(list1,list2):
-    for i in range(len(list1)):
-        new_list.append(list1[i] + list2[i])
-
-sum_lists(list1,list2)
-print(new_list)
+# new_list = []
+#
+# def sum_lists(list1,list2):
+#     for i in range(len(list1)):
+#         new_list.append(list1[i] + list2[i])
+#
+# sum_lists(list1,list2)
+# print(new_list)
 
 # 방법 2) lambda 사용
 new_list_lam = list(map(lambda x,y : x + y, list1,list2))

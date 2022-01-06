@@ -30,3 +30,7 @@
 # 방법 4) import calculator as cal
 import calculator as cal
 print(cal.add(10,5))
+
+import sys
+sys.path.append('/game/graphic/render.py')
+
