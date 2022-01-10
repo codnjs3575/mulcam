@@ -4,14 +4,8 @@
 
 - 트리(Tree) : `가계도`와 같은 **계층적인 구조**를 표현할 때 사용할 수 있는 자료구조
 
-<img src="./assets/Algorithm_3.assets/image-20220109151405960.png" alt="image-20220109151405960" style="zoom:40%;" align='left' />
+<img src="./assets/Algorithm_3.assets/image-20220109151405960.png" alt="image-20220109151405960" style="zoom:40%;" height = "150px" align='left' />
 <br><br><br><br><br><br>
-
-
-
-
-
-
 
 
 
@@ -25,12 +19,8 @@
   - 부모 노드보다 왼쪽 자식 노드가 작음
   - 부모 노드보다 오른쪽 자식 노드가 큼
 
-<img src="./assets/Algorithm_3.assets/image-20220109151812972.png" alt="image-20220109151812972" style="zoom:40%;" align='left'/>
-<br><br><br><br><br><br>
-
-
-
-
+      <img src="./assets/Algorithm_3.assets/image-20220109151812972.png" alt="image-20220109151812972" style="zoom:40%;" height = "150px"  align='left'/>
+  <br><br><br><br><br><br><br><br>
 
 
 
@@ -39,46 +29,13 @@
 - 이진 탐색 트리가 이미 구성되어 있다고 가정하고 데이터를 조회하는 과정을 살펴봄
 - 찾고자하는 원소 : `37`
 
-  <img src="./assets/Algorithm_3.assets/image-20220109152248207.png" alt="image-20220109152248207" style="zoom:50%;" align='left' />
-  <br><br><br><br><br><br>
+  <img src="./assets/Algorithm_3.assets/image-20220109152248207.png" alt="image-20220109152248207" style="zoom:50%;" height = "500px"  align='left' />
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   
   
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><br><br><br><br><br>
 ## 3. 트리의 순회 (Tree Traversal)
 
 - 트리 자료구조에 포함된 노드를 특정한 방법으로 한 번씩 방문하는 방법을 의미
@@ -90,25 +47,16 @@
   -  `전위 순회` (pre-order traverse) : 루트 -> 왼쪽 자식 -> 오른쪽 자식
   -  `중위 순회` (in-order traverse) : 왼쪽 자식 -> 루트 -> 오른쪽 자식
   -  `후위 순회` (post-order traverse) : 왼쪽 자식 -> 오른쪽 자식 -> 루트
-
+  <br><br>
   
   
-  
-  <img src="./assets/Algorithm_3.assets/image-20220109152751584.png" alt="image-20220109152751584" style="zoom:40%;" align='left' />
-<br><br><br><br><br><br>
+  <img src="./assets/Algorithm_3.assets/image-20220109152751584.png" alt="image-20220109152751584" style="zoom:40%;" height = "250px" align='left' />
+<br><br><br><br><br><br><br><br>
 
 
 
 
-
-
-
-
-
-
-
-
-
+<br><br>
 ### - 트리의 순회 구현 예제 (파이썬)
 
 ```python
