@@ -19,19 +19,18 @@
 - `2진법 인덱스 구조`를 활용해 구간 합 문제를 효과적으로 해결해 줄 수 있는 자료구조
 - 정수에 따른 2진수 표기 (**2의 보수법**)
 
-<img src="./assets/Algorithm_4.assets/image-20220109220515520.png" alt="image-20220109220515520" style="zoom:50%;" align='left'/>
-<br><br><br><br><br><br>
+  <img src="./assets/Algorithm_4.assets/image-20220109220515520.png" alt="image-20220109220515520" style="zoom:50%;" height='100px' align='left'/>
+<br><br><br><br><br>
 
-<br><br>
 - < 0이 아닌 마지막 비트를 찾는 방법 >
   - 특정한 숫자 K의 0이 아닌 마지막 비트를 찾기 위해서 K & -K를 계산하면 됨 (위의 경우 1)
 
 - K & -K 계산 결과 예시 (표)
 
-<img src="./assets/Algorithm_4.assets/image-20220109220952193.png" alt="image-20220109220952193" style="zoom:50%;" align = 'left' />
+  <img src="./assets/Algorithm_4.assets/image-20220109220952193.png" alt="image-20220109220952193" style="zoom:50%;" height='200px' align = 'left' />
 <br><br><br><br><br><br>
 
-<br><br>
+<br><br><br>
 - K & -K 계산 결과 예시 (파이썬)
 
 > 4_1
@@ -60,26 +59,26 @@ for i in range(n+1) :
 
 - 0이 아닌 마지막 비트 = 내가 저장하고 있는 값들의 개수
 
-<img src="./assets/Algorithm_4.assets/image-20220110132648190.png" alt="image-20220110132648190" style="zoom:50%;" align='left' />
+  <img src="./assets/Algorithm_4.assets/image-20220110132648190.png" alt="image-20220110132648190" style="zoom:50%;" height='250px' align='left' />
 <br><br><br><br><br><br>
 
-
+<br><br><br><br>
 ### 2. 값 업데이트
 
 - 특정 값을 변경할 때 : 0이 아닌 마지막 비트만큼 더하면서 구간들의 값을 변경 (예시 = `3rd`)
 
-<img src="./assets/Algorithm_4.assets/image-20220109222858969.png" alt="image-20220109222858969" style="zoom:50%;" align='left' />
+  <img src="./assets/Algorithm_4.assets/image-20220109222858969.png" alt="image-20220109222858969" style="zoom:50%;" width='750px' height='250px' align='left' />
 <br><br><br><br><br><br>
 
-<br><br>
+<br><br><br><br>
 ### 3. 누적 합 (Prefix Sum)
 
 - **1부터 N까지의 합(누적 합) 구하기** : 0이 아닌 마지막 비트만큼 빼면서 구간들의 값의 합 계산 (예시 = `11th`)
 
-<img src="./assets/Algorithm_4.assets/image-20220109223330523.png" alt="image-20220109223330523" style="zoom:50%;" align='left' />
+  <img src="./assets/Algorithm_4.assets/image-20220109223330523.png" alt="image-20220109223330523" style="zoom:50%;" height='250px' align='left' />
 <br><br><br><br><br><br>
 
-<br><br>
+<br><br><br><br>
 ### 4. 바이너리 인덱스 트리 구현 (파이썬)
 
 > 4_2
