@@ -5,9 +5,6 @@ class tree_node():
         self.data = None
         self.right = None
 
-# 전역 변수
-
-
 # 메인 코드
 node1 = tree_node()
 node1.data = '화사'

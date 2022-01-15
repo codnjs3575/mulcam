@@ -46,9 +46,15 @@ for i in range(1,10):
     gugu(i,1)
     print()
 
-# 6. N제곱 계산
-def pow(x,n):
-    pass
+# 6. 배열의 합 계산하기
+import random
 
-print(f'2의 4제곱 : {pow(2,4)}')
+def arr_sum(arr,n):
+    if n <= 0 :
+        return arr[0]
+    return arr_sum(arr,n+1) + arr[n]
 
+arr = [random.randint(0,255) for _ in range (random.randint(10,20))]
+
+print(arr)
+print(f'배열 합계 --> {arr_sum(arr,len(arr)-1)}')
