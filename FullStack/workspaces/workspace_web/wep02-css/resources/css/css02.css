@@ -1,0 +1,67 @@
+/* 타입 */
+pre{
+    text-align: right;
+}
+
+/* id : 서로 다른 값 */
+#s-id01{
+    color:hotpink;
+}
+#s-id02{
+    color:darkred;
+}
+#s-id03{
+    color:skyblue;
+}
+
+/* class : 같은 여러개 */
+.s-cls01{
+    background-color: black;
+    color: white;
+}
+
+/* 전체 선택자 */
+*{
+    text-align: left;
+}
+
+/* 자식 선택자 */
+#atc > p {
+    color:yellowgreen;
+}
+
+/* 인접 선택자 */
+span + pre {
+    background-color: cornflowerblue;
+}
+
+/* 하위 선택자 */
+#atc02 span{
+    color:chocolate;
+}
+
+/* 속성 */
+p[title] {
+    background-color: grey;
+}
+
+/* 가상 클래스 선택자 */
+a:link{
+    color:green;
+    font-size:20pt;
+}
+a:visited{
+    color:darkmagenta;
+}
+a:hover{
+    background-color: black;
+    color: white;
+}
+a:active{
+    background-color: yellow;
+    color:tomato;
+}
+input:checked{
+    width: 100px;
+    height: 100px;
+}
