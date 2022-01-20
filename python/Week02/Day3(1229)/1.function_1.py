@@ -105,11 +105,11 @@ print()
 
 # 6. ord(문자열) : 문자에 대한 아스키코드(ASCII) 값 반환
 print('06. ord()','-'*70)
-print("ord(""A"") :",ord("A"))
+print("ord(\"A\") :",ord("A"))
 print("ord(' ') :",ord(' '))
-print("ord(""n"") :",ord('\n'))
-print("ord(""t"") :",ord('\t'))
-print("ord(""0"") :",ord('0'))
+print("ord(\"n\") :",ord('\n'))
+print("ord(\"t\") :",ord('\t'))
+print("ord(\"0\") :",ord('0'))
 print()
 
 # 7. divmod(a,b) : a를 b로 나눈 몫과 나머지 반환

@@ -38,9 +38,11 @@ print("type(z):",type(z))
 
 
 
-
-
-
+ins, outs='python',''
+strl = len(ins)
+for i in range(0,strl):
+    outs += ins[strl-(i+1)]
+print(outs)
 
 
 
