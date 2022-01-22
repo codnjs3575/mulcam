@@ -3,10 +3,12 @@
 - 앞서 다룬 네 가지 정렬 알고리즘 비교
 - 대부분의 프로그래밍 언어에서 지원하는 표준 정렬 라이브러리는 최악의 경우에도 O(NlogN)을 보장하도록 설계되어있음
 
-<img src="./assets/Algorithm_7.assets/image-20220116121241339.png" alt="image-20220116121241339" style="zoom:40%;" align='left'/>
+<img src="./assets/Algorithm_7.assets/image-20220116121241339.png" alt="image-20220116121241339" height = '150px' align='left'/>
+<br><br><br><br><br><br>
 
 
 
+<br><br><br>
 ## 1. 선택 정렬과 기본 정렬 라이브러리 수행 시간 비교 구현 (파이썬)
 
 > 7_1
@@ -57,7 +59,7 @@ print(f'기본 정렬 성능 측정 : {end_time -  start_time}')
 
 
 
-
+<br><br>
 ## 2. 문제 : 두 배열의 원소 교체 
 
 ### 1) 문제 설명
@@ -89,13 +91,13 @@ print(f'기본 정렬 성능 측정 : {end_time -  start_time}')
   - 이때 배열 A의 모든 원소의 합은 26이 되며, 이보다 더 합을 크게 만들 수는 없습니다.
 
 
-
+<br><br>
 ### 2) 문제 조건
 
-<img src="./assets/Algorithm_7.assets/image-20220116123003571.png" alt="image-20220116123003571" style="zoom:40%;" align='left' />
+<img src="./assets/Algorithm_7.assets/image-20220116123003571.png" alt="image-20220116123003571" height = '300px' align='left' />
+<br><br><br><br><br><br><br><br><br>
 
- 
-
+<br><br><br><br><br><br>
 ### 3) 문제 해결 아이디어
 
 - 핵심 아이디어 : 매번 배열 A에서 가장 작은 원소를 골라서, 배열 B에서 가장 큰 원소와 교체
@@ -104,7 +106,7 @@ print(f'기본 정렬 성능 측정 : {end_time -  start_time}')
 - 최악의 경우 O(NlogN)을 보장하는 정렬 알고리즘을 이용해야 합니다.
 
 
-
+<br><br>
 ### 4) 구현 (파이썬)
 
 > 7_2
