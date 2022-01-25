@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tb{
+            width:500px;
+            height: 500px;
+        }
+        th{
+            background-color: skyblue;
+            width: auto;
+            padding: 5px 10px 5px 10px;
+        }
+        td{
+            text-align: center;
+            background-color: rgb(234, 249, 255);
+        }
+    </style>
+    <script>
+        function ajaxTest(){
+            var xhr = new XMLHttpRequest();
+            // 콜백함수
+            xhr.onreadystatechange = function(){
+                // readyState
+                // 0 : uninitialized // 1 : loading // 2 : loaded // 3 : interactive // 4 : complete, 요청의 완료
+                if(xhr.readyState == 4){
+                    // 200 : 정상 응답 // 400 : bad request, 잘못 요청 // 401 : unauthorized, 권한 없음 
+                    // 403 : forbidden // 404 : not found // 415 : 요청을 잘못 함 
+                    if (xhr.status == 200){
+                        // alert(xhr.responseText); // responseText : 응답 메세지
+                        var respXml = xhr.responseXML; // XML 객체로 바꿔서 받아옴
+                        // var Rows = respXml.getElementsByTagName("")
+                        var tb = document.getElementById('tb')
+                        var Th = document.createElement('th')
+                        var Tr = document.createElement('tr')
+                        
+                        var tagArr = ["EMPLOYEE_ID","LAST_NAME","EMAIL","PHONE_NUMBER","HIRE_DATE"]
+                        
+                        // EMPLOYEE_ID LAST_NAME EMAIL PHONE_NUMBER HIRE_DATE
+                        console.log(respXml);
+                        var IdArr = respXml.getElementsByTagName(tagArr[0]);
+                        var NameArr = respXml.getElementsByTagName(tagArr[1]);
+                        var EmailArr = respXml.getElementsByTagName(tagArr[2]);
+                        var PhoneArr = respXml.getElementsByTagName(tagArr[3]);
+                        var HDArr = respXml.getElementsByTagName(tagArr[4]);
+
+                        // 테이블 제목 출력
+                        for (var i = 0; i<tagArr.length; i++){
+                            var Th = document.createElement('th')
+                            Th.textContent = tagArr[i];
+                            Tr.appendChild(Th);
+                            document.getElementById('tb').appendChild(Tr)
+                        }
+
+                        // 테이블 내용 출력
+                        for (var i =0; i<IdArr.length; i++){
+                            var Tr = document.createElement('tr');
+                            var Td = document.createElement('td');
+                            Td.textContent = IdArr[i].textContent;
+                            Tr.appendChild(Td);
+                            var Td = document.createElement('td');
+                            Td.textContent = NameArr[i].textContent;
+                            Tr.appendChild(Td);
+                            var Td = document.createElement('td');
+                            Td.textContent = EmailArr[i].textContent;
+                            Tr.appendChild(Td);
+                            var Td = document.createElement('td');
+                            Td.textContent = PhoneArr[i].textContent;
+                            Tr.appendChild(Td);
+                            var Td = document.createElement('td');
+                            Td.textContent = HDArr[i].textContent;
+                            Tr.appendChild(Td);
+                            document.getElementById("tb").appendChild(Tr)
+                        }
+                    }
+                }
+            }
+
+            // get방식으로 해당 경로(emplist.xml)에 요청
+            xhr.open('GET','emplist.xml');
+            xhr.send()
+        }
+
+    </script>
+</head>
+<body>
+    <!--
+        ajax : Asynchronous Javascript And Xml
+        비 동기 통신
+        클라이언트와 서버가 동기화되지 않음 
+        동기화 : 클라이언트가 서버에 요청을 하면 서버는 응답을 함
+        비동기화 : 클라이언트가 서버에 요청을 하고 서버의 응답을 기다리지 않음, 콜백
+    -->
+    <button onclick = 'ajaxTest();'>ajax</button>
+    <table id='tb' border='1'>
+
+    </table>
+</body>
+</html>

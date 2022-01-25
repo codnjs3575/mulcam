@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.dom</title>
+    <style>
+        img, #imgview{
+            width:300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<script>
+    function createiImg(){
+        // 1. 이름이 rdobtn인 요소들을 가지고 온다.
+        var rdobtn = document.getElementsByName("rdobtn");
+        var radioVal=''
+
+        // 2. 가지고 온 요소들의 length만큼 반복하여 라디오 버튼이 체크되어있는지 확인하고,
+        // 만일 체크되었다면 자신의 이미지를 가지고 온다.   
+        // hint) radioVal = 'resources/img/img0' +
+        var radioVal = ''
+        for (var i=0; i<rdobtn.length; i++){
+            if (rdobtn[i].checked){
+                radioVal='resources/imgs/'+rdobtn[i].value;
+            }
+        }
+        // 3. img 태그를 생성하고 src 속성에 위의 값(radioVal)을 저장하면 화면에 그림이 나오도록 함
+        var img = document.createElement('img')
+        img.setAttribute("src",radioVal)
+        var div = document.getElementById("imgview");
+        var chd = document.querySelector("#imgview > img");
+        div.replaceChild(img,chd);
+    }
+    function deleteImg(){
+        // document.getElementById("imgview").innerHTML="<img src=''>"
+        document.querySelector("#imgview > img").src = ""
+        // var img = document.getElementById('imgview');
+        // img.src = "";
+
+        var rdobtn = document.getElementsByName("rdobtn");
+        for (var i=0; i<rdobtn.length; i++){
+            if (rdobtn[i].checked){
+                rdobtn[i].checked = false;
+            }
+        }
+    }
+</script>
+<body>
+    <input type="radio" name='rdobtn' value='Yuuun01.jpeg'>img01<br>
+    <input type="radio" name='rdobtn' value='Yuuun02.jpeg'>img02<br>
+    <input type="radio" name='rdobtn' value='Yuuun03.jpeg'>img03<br>
+
+    <button onclick="createiImg();">이미지 생성</button>
+    <button onclick="deleteImg();">이미지 삭제</button>
+
+    <div id='imgview'><img src="" alt='버튼을 눌러주세요'></div>
+</body>
+</html>

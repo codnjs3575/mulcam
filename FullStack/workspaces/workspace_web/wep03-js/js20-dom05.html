@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20.dom05</title>
+    <style>
+        img{
+            vertical-align: middle;
+            width: 300px;
+            height: 300px;
+        }
+        a{
+            font-size: 30px;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        // function 
+        window.onload = function(){
+            var anchs = document.querySelectorAll('a');
+            var img = document.querySelector('img');
+
+            var count = 1;
+
+            // 왼쪽 화살표
+            anchs[0].onclick = function(){
+                var imgAlt = img.getAttribute("alt")
+                if (imgAlt  == 'img01'){
+                    count = 7;
+                    console.log('count : ',count);
+                    img.setAttribute('alt','img06')
+                    img.setAttribute('src','resources/imgs/Yuuun06.jpeg')
+                }else{
+                    console.log('count?',count);
+                    img.setAttribute('alt','img0'+(--count));
+                    img.setAttribute('src','resources/imgs/Yuuun0'+count+".jpeg")  
+                }
+
+            }
+            // 오른쪽 화살표
+            anchs[1].onclick = function(){
+                var imgAlt = img.getAttribute("alt")
+                if(imgAlt == 'img06'){
+                    count = 0;
+                    console.log('count : ',count);
+                    img.setAttribute('alt','img01');
+                    img.setAttribute('src','resources/imgs/Yuuun01.jpeg');
+                    count++
+                }else{
+                    console.log(count);
+                    img.setAttribute('alt','img0'+(++count));
+                    img.setAttribute('src','resources/imgs/Yuuun0'+count+".jpeg")
+                    
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <a href="#" id='lt'>◀</a>
+        <img src="resources/imgs/Yuuun01.jpeg" alt="img01">
+        <a href="#" id='gt'>▶</a>
+    </div>
+</body>
+</html>

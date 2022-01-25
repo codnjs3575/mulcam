@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tb{
+            width:500px;
+            height: 500px;
+        }
+        th{
+            background-color: skyblue;
+            width: auto;
+            padding: 5px 10px 5px 10px;
+        }
+        td{
+            text-align: center;
+            background-color: rgb(234, 249, 255);
+        }
+    </style>
+    <script>
+        function ajaxTest(){
+            var xhr = new XMLHttpRequest();
+            // 콜백함수
+            xhr.onreadystatechange = function(){
+                // readyState
+                // 0 : uninitialized // 1 : loading // 2 : loaded // 3 : interactive // 4 : complete, 요청의 완료
+                if(xhr.readyState == 4){
+                    // 200 : 정상 응답 // 400 : bad request, 잘못 요청 // 401 : unauthorized, 권한 없음 
+                    // 403 : forbidden // 404 : not found // 415 : 요청을 잘못 함 
+                    if (xhr.status == 200){
+                        var respXml = xhr.responseXML; // XML 객체로 바꿔서 받아옴
+
+                        var table = document.getElementById('tb')
+                        var rows = respXml.getElementsByTagName('ROW');
+
+                        // 테이블 제목
+                        var columnTr = document.createElement("tr");
+                        for (var i=0; i<rows[0].children.length;i++){
+                            var th = document.createElement('th');
+                            th.appendChild(document.createTextNode(rows[0].children[i].nodeName));
+                            columnTr.append(th)
+                        }
+                        table.appendChild(columnTr)
+
+                        // 테이블 내용
+                        for(var i=0; i<rows.length;i++){
+                            var tr = document.createElement("tr")
+                            for(var j=0;j<rows[i].children.length;j++){
+                                var td = document.createElement('td')
+                                td.appendChild(document.createTextNode(rows[i].children[j].textContent))
+                                tr.appendChild(td);
+                            }
+                            table.appendChild(tr);
+                        }
+                    }
+                }
+            }
+
+            // get방식으로 해당 경로(emplist.xml)에 요청
+            xhr.open('GET','emplist.xml');
+            xhr.send()
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick = 'ajaxTest();'>ajax</button>
+    <table id='tb' border='1'>
+
+    </table>
+</body>
+</html>
