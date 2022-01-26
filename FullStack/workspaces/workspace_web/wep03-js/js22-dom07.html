@@ -9,7 +9,9 @@
         function tableVal(){
             var doc = document.forms[0]; // 문서에 있는 form태그들
             var vals = [doc.id.value, doc.pw.value, doc.addr.value, doc.phone.value]
-
+            for(var i=0; i<doc.length;i++){
+                console.log(doc[i])
+            }
             // 유효성 검사
             for (var i =0; i<vals.length;i++){
                 if(vals[i] ==null || vals[i] == "" || vals[i] ==undefined){
