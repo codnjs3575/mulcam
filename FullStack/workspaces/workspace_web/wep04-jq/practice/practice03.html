@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice3</title>
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <script>
+        function inputText(){
+            var txt = $('input:text').val();
+            $('#btn').last().after('<br>입력한 데이터 : '+txt);
+        }
+        function inputRadio(){
+            var radioVal = $('input:radio')
+            radioVal.last().after(radioVal.val())
+
+        }
+        function inputCheck(){
+            var checkboxVal = $('input:checkbox');
+            checkboxVal.last().after(checkboxVal.val())
+        }
+    </script>
+</head>
+<body>
+    <form>
+        1. text : <input type="text"> <input type="button" id='btn' value="선택" onclick='inputText();'>
+        <br><br>
+        2. radio : <input type="radio" value='radio 선택하였습니다.' onclick='inputRadio();'>
+        <br><br>
+        3. checkbox : <input type="checkbox" value="checkbox 선택하였습니다." onclick='inputCheck();'>
+        <br><br>
+
+        <div id='a'></div>
+        4. select : 
+        <select>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+        </select>
+    </form>
+    <script>
+        $('select').change(function(){
+            var option = $('select > option:selected')
+            $('select').last().after("&nbsp;",option.val())
+        });
+    </script>
+</body>
+</html>

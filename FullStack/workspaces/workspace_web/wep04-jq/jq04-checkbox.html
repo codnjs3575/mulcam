@@ -47,14 +47,26 @@
 
             // 숙제 2: 모두 선택되어있으면 name이 all인 체크박스도 체크
             // 하나라도 체크 해제되면 name이 all인 체크박스 체크 해제
+            var count = 0
             $("input[name=chk]").click(function(){
-
+                if($(this)[0].checked){
+                    count += 1;
+                }else{ 
+                    count -= 1; 
+                }
+                if (count == 3){
+                    $('input[name=all]')[0].checked = true
+                }else{
+                    $('input[name=all]')[0].checked = false
+                }
             })
 
         });
         // 숙제 1
         function allChk(bool){
-
+            var chkArr = $("input[name=chk]").each(function(){
+                this.checked = bool
+            });
         }
 
     </script>

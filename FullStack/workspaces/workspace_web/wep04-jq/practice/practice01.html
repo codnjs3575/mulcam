@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        img{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+    <script src="resources/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                alert("반갑습니다!");
+            });
+            $('img').click(function(){
+                $(this).hide();
+            });
+            $('#resetbtn').click(function(){
+                $('img').show()
+                $('img').css({'width':'200px','height':'200px'})
+            });
+        });
+
+        function showImg(){
+            $('img').show();
+        }
+        function resizeImg(){
+            $('img').css({'width':"100px",'height':'100px'});
+        }
+        function addImg(){
+            $('img').last().after("<img src='resources/imgs/Yuuun02.jpeg'>");
+            console.log($('img'))
+        }
+        function toggleImg(){
+            $('img').toggle();
+        }
+    </script>
+</head>
+<body>
+    <button id='btn'>click me</button>
+    <button id='resetbtn'>원래대로</button>
+    <br><br>
+
+    <button onclick="showImg();">이미지 보이기</button>
+    <button onclick="resizeImg();">이미지 축소</button>
+    <button onclick="addImg();">이미지 추가</button>
+    <button onclick="toggleImg();">이미지 숨기기/보이기</button>
+    <br><br>
+    <div>
+        <img src="resources/imgs/Yuuun01.jpeg" alt="img01">
+    </div>
+</body>
+</html>

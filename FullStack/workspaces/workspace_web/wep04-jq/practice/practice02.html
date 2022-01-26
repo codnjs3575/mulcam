@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice2</title>
+
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div:eq(0)').css({'border':'1px solid red', 'width':'400px','height':'200px'});
+            $('#view').css({'border':'1px solid red','width':'400px','height':'300px',
+            'text-align':'center','font-size':'20px'})
+        });;
+
+        // tag로 선택
+        function selector01(){
+            $('span').css('background-color','purple');
+            $('#view').append("<br>$('span').css('background-color','purple'))");
+        }
+
+        // id로 선택
+        function selector02(){
+            $('#t1').css('background-color','blue');
+            $('#view').append("<br>$('#t1').css('background-color','blue')");
+        }
+
+        // class로 선택
+        function selector03(){
+            $('.t2').css('background-color','skyblue');
+            $('#view').append("<br>$('.t2').css('background-color','skyblue')");
+        }
+
+        // parent child 선택
+        function selector04(){
+            $('li span').css('color','yellow')
+            $('#view').append("<br>$('li span').css('color','yellow')");
+        }
+
+        // parent > child 선택
+        function selector05(){
+            $('b > span').css('background-color','green')
+            $('#view').append("<br>$('b > span').css('font-size','700')");
+        }
+
+        // nth-child 선택
+        function selector06(){
+            $('li:nth-child(odd)').css('color','hotpink')
+            $('#view').append("<br>$('li:nth-child').css('color','hotpink')");
+        }
+
+        // first-child 선택
+        function selector07(){
+            $('li:first-child').css('background-color','pink')
+            $('#view').append("<br>$('li:first-child').css('background-color','pink')");
+        }
+        // last-child 선택
+        function selector08(){
+            $('li:last-child').css('background-color','red')
+            $('#view').append("<br>$('li:last-child').css('background-color','red')");
+        }
+
+        function cls(){
+            $('div > ul *').css({'color':'','background-color':''});
+            $('#view').text('');
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><span>tag로 선택</span></li>
+            <li id='t1'>id로 선택</li>
+            <li class='t2'>class로 선택</li>
+            <li><span>parent child로 선택</span></li>
+            <li><b><span>parent &gt; child</span></b>로 선택</li>
+            <li>:nth-child(n/odd/even)로 선택</li>
+            <li>:first-child로 선택</li>
+            <li>:last-child로 선택</li>
+        </ul>
+    </div>
+    <br>
+    <div>
+        <button onclick="selector01();">tag 선택</button>
+        <button onclick="selector02();">id 선택</button>
+        <button onclick="selector03();">class 선택</button>
+        <button onclick="selector04();">parent child 선택</button>
+        <button onclick="selector05();">parent &gt; child 선택</button>
+        <button onclick="selector06();">nth-child 선택</button>
+        <button onclick="selector07();">first-child 선택</button>
+        <button onclick="selector08();">last-child 선택</button>
+        <br><br>
+        <button onclick="cls();">reset</button>
+
+    </div>
+
+    <h2>코드 내용</h2>
+    <div id='view'></div>
+</body>
+</html>
