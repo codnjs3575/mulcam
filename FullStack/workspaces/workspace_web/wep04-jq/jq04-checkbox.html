@@ -8,7 +8,7 @@
     <script src="resources/js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $("#signal").submit(function(){
+            $("#signal").submit(function(e){
                 if($(".infobox").val()==null || $(".infobox").val()==""){
                     $(".error").show(); // display 보이게 => hidden을 바꿈
                     // 이벤트의 전파를 막음
@@ -60,7 +60,6 @@
                     $('input[name=all]')[0].checked = false
                 }
             })
-
         });
         // 숙제 1
         function allChk(bool){
@@ -68,7 +67,6 @@
                 this.checked = bool
             });
         }
-
     </script>
 </head>
 <body>

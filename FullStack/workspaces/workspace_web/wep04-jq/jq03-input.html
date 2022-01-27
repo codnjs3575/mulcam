@@ -7,6 +7,23 @@
     <title>3.input</title>
     <script src='resources/js/jquery-3.6.0.min.js'></script>
     <script>
+        // 1. function() 있으면 가능
+        $(function(){
+        // $(document).ready(function(){
+            $("select").change(function(){
+                var option = $("select > option:selected")
+                alert(option.val());
+                alert($("select > option").index(option));
+            });
+        })
+
+        // 2. function() 없으면 안 됨
+        // $("select").change(function(){
+        //     var option = $("select > option:selected")
+        //     alert(option.val());
+        //     alert($("select > option").index(option));
+        // });
+
         function inputText(){
             var txt = $("input:text").val() //input 태그 중 type이 text인 Element의 value
             // JS : value();   // JQ : val();
@@ -21,16 +38,6 @@
             var checkVal = $("input:checkbox").val()
             $("#a").html(checkVal)
         }
-        /*
-        $(function(){
-            $("select").change(function(){
-                var option = $("select > option:selected")
-                alert(option.val());
-                alert($("select > option").index(option));
-            });
-        })
-        */
-
 
     </script>
 </head>
@@ -54,12 +61,14 @@
         </select>
 
     </form>
+    <!-- 
     <script>
         $("select").change(function(){
             var option = $("select > option:selected")
             alert(option.val());
             alert($("select > option").index(option));
         });
-    </script>
+    </script> 
+    -->
 </body>
 </html>

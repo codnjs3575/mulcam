@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.slotmachine</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+            float: left;
+        }
+        #menubox{
+            position: relative;
+        }
+        #menu{
+            overflow: auto;
+        }
+        .sel{
+            width:140px;
+            height: 140px;
+            border: 5px dotted red;
+            position: absolute;
+            left:300px;
+        }
+        button{
+            width:150px;
+            height: 50px;
+            margin-left: 300px;
+        }
+    </style>
+    <script src="resources/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 0.1초마다 함수 실행
+            setInterval(function(){
+                var div = $('#menu');
+                // append : 자식 요소 중 가장 뒤에 넣음
+                // 기준.append(내용) // 내용.appendTo(기준)
+                $('.active').first().appendTo(div);
+                // $('.active').appendTo(div);
+            },100);
+            $('button').click(function(){
+                // $("").toggleClass("class이름") : 호출될 때마다 지정한 "class이름"의 class 설정/해제 반복
+                $('img').toggleClass('active');
+                if($('button').text() == "start"){
+                    $('button').text('stop');
+                }else{
+                    $('button').text('start');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>slotmachine</h1>
+
+    <div id='menubox'>
+        <div class='sel'></div>
+        <div id="menu">
+            <img src="resources/imgs/Yuuun01.jpeg" alt="Yuuun01">
+            <img src="resources/imgs/Yuuun02.jpeg" alt="Yuuun02">
+            <img src="resources/imgs/Yuuun03.jpeg" alt="Yuuun03">
+            <img src="resources/imgs/Yuuun04.jpeg" alt="Yuuun04">
+            <img src="resources/imgs/Yuuun05.jpeg" alt="Yuuun05">
+            <img src="resources/imgs/Yuuun06.jpeg" alt="Yuuun06">
+        </div>
+        <button>start</button>
+    </div>
+</body>
+</html>
