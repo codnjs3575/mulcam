@@ -9,11 +9,11 @@
     <script>
         $(document).ready(function(){
             $("div").find("b").css({"font-size":"30px","color":"red"});
-            $("div").children("#chd").text("2.children()").css({"background-color":'purple'});
+            $("div").children("#chd").text("2.children()").css({"background-color":'purple',"color":"yellow"});
             $("b").parent().css("background-color","hotpink")
             // $("p > b").parent().css("background-color","skyblue")
             $("b").parents("p").css("background-color","yellow")
-            $("p").eq(0).next().css("color","yellow")
+            $("p").eq(0).next().css("color","red")
         });
     </script>
 </head>
@@ -29,7 +29,7 @@
         <p id='chd'>2</p>
         <p>3</p>
         <p>4</p>
-        <p>5</p>
+        <p><b>5</b></p>
     </div>
 </body>
 </html>

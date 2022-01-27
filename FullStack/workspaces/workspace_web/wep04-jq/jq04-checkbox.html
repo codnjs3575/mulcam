@@ -8,41 +8,45 @@
     <script src="resources/js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
+            //전달하는 이벤트가 발생했을때 //JS : onsubmit
             $("#signal").submit(function(e){
                 if($(".infobox").val()==null || $(".infobox").val()==""){
                     $(".error").show(); // display 보이게 => hidden을 바꿈
-                    // 이벤트의 전파를 막음
+                    // 이벤트의 전파를 막음, submit 막음
                     return false; // 전송을 하지 않고 멈춰라
                 }
-            }); //전달하는 이벤트가 발생했을때 //JS : onsubmit
+            }); 
+            
             $("#confirm").click(function(){
                 var sum = 0;
                 var sum2 = 0
-                $("#result").empty();
+                $("#result").empty(); 
                 chkArr = $("input[name=chk]:checked").each(function(i){
                     /// 1. 강사님 코드
                     // ------------인덱스 가지고 오는 변수--------------
                     var chk = $("input[name=chk]:checked").eq(i) 
-                    // console.log(chk)
+                    // console.log(chk.next())
                     // ------------------------------------------
 
                     // ---------------책과 가격 출력--------------
-                    var book = chk.next().text(); //.next -> 체크박스 옆에 있는 애 (같은 형제들 중 옆 형제)
+                    var book = chk.next().text(); //.next -> 체크박스 옆에 있는 애 (같은 형제들 중 옆 형제)(b태그)
                     var price = chk.val();
                     $("#result").append(book+":"+price+"<br>");
                     //-----------------------------------------
                     // ------------각각 더해서 출력하기-------------
                     sum += parseInt(price)
+                    
                     //-----------------------------------------
                     /// ---------------------------------------
 
                     /// 2. 내 코드
-                    for (var i=0; i<$(this).length;i++){
-                        sum2 += parseInt($(this)[0].value)
-                    }
+                    // for (var i=0; i<$(this).length;i++){
+                    //     sum2 += parseInt($(this)[0].value)
+                    // }
                     /// ---------------------------------------
                 });
-                $("#result").html(sum2)
+                $("#result").append(sum+'원')
+                // $("#result").html(sum2+'원')
             });
 
             // 숙제 2: 모두 선택되어있으면 name이 all인 체크박스도 체크

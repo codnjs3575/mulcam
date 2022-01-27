@@ -8,8 +8,10 @@
     <script src="resources/js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
+            // p:eq(0)와 span 모두 css 적용
             $("p:eq(0)").add("span").css("color","red")
 
+            
             $("div").children().click(function(){
                 if($(this).prop("tagName")=="SPAN"){
                     alert("span tag click!!");

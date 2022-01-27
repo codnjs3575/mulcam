@@ -22,16 +22,14 @@
     <script>
         $(document).ready(function(){
             $("p:eq(0)").click(function(){
-                $(this).remove(); //p태그 없어짐
+                $(this).remove(); //p 태그 전체 없어짐
             });
             $("p:eq(1)").click(function(){
-                // 잘라내기
-                var ele = $(this).detach();
+                var ele = $(this).detach(); // p 태그 전체 잘라내기
                 $('h1').append(ele);
             });
             $("p:eq(2)").click(function(){
-                // 안에 있는 모든 요소들이 사라짐
-                $(this).parent().empty();
+                $(this).parent().empty(); // 안에 있는 모든 요소들이 사라짐 // 자식 요소 x , 자식 노드가 사라짐
             });
         })
     </script>

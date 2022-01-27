@@ -10,9 +10,16 @@
         $(function(){
            
             $('button:first').click(function(){
-                 // target 앞
-                 // target(p)
-                $('p').replaceWith('<p><b>replaceWith()</b></p>');
+                // target 앞
+                // target(p)
+                // 방법 1
+                // $('p').replaceWith('<p><b>replaceWith()</b></p>');
+
+                // 방법 2
+                $('p').replaceWith(function(){
+                    alert('gd')
+                    $('p').replaceWith('dd')
+                });
             })
             
             $('button:last').click(function(){

@@ -8,8 +8,10 @@
     <style>
         .box{border:2px solid red;}
         #menu{
+            margin-left:300px;
+            margin-right:300px;
             background-color: skyblue;
-            text-align: right;
+            text-align: center;
         }
         a{
             text-decoration: none;
@@ -23,8 +25,7 @@
     <script src="resources/js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            //$("<div class='box'>") 도 가능
-            var $box = $('<div>').addClass('box');
+            var $box = $('<div>').addClass('box');  //$("<div class='box'>") 도 가능
             $('.sub_menu:first').wrap($box); // 부모요소로 wrap
 
             $('.sub_menu').click(function(){

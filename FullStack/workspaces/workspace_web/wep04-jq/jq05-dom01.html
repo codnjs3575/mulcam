@@ -22,14 +22,14 @@
             });
 
             $("div > p").eq(3).click(function(){
-                $('pre b').last().toggle().css('background-color','skyblue');
+                $('pre b').last().css('background-color','skyblue').toggle();
             });
         })
     </script>
 </head>
 <body>
     <pre>
-        <b>eq(): 선택한 엘리먼트들 중에 인덱스로 탐색</b>
+        <b>eq(): 선택한 엘리먼트들 중에 인덱스로 탐색 - toggle() 적용</b>
         <b>slice(): 선택한 엘리먼트들 중에 인덱스 길이로 탐색</b>
         <b>first(): 선택한 엘리먼트들 중에 첫번째 요소</b>
         <b>last(): 선택한 엘리먼트들 중에 마지막 요소</b>

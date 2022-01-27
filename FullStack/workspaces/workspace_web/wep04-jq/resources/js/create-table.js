@@ -1,9 +1,10 @@
 //엘리먼트들에 대한 데이터를 테이블 형식으로 화면에 표현하기
 
 function makeTable(elem){
+	// 테이블 태그 생성
 	var $table = $("<table border=1>");
 	
-	//컬럼 정의하기
+	//컬럼 정의하기 // 제목들 넣기
 	for(var i =0; i<1;i++){
 		var $tr=$("<tr>");
 		for(var j=0; j<elem.eq(0).children().length;j++){
