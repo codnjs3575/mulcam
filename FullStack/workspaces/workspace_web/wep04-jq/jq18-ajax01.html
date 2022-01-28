@@ -26,7 +26,7 @@
                         dataType:"xml",                 // 전송받을 데이터 타입 : xml, json. html. script
                         // data : {"key":"value"}       // 전송할 데이터
                         success:function(data){         //성공했을 때 실행되는 함수
-                            // alert(data);
+                            // console.log(data);
                             // css 클래스 가상 선택자
                             var empInfo = $(data).find("EMPLOYEE_ID:contains("+empid+")").parent();
                             if((empInfo).is("ROW")){

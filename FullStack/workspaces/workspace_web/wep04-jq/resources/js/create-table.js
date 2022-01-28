@@ -3,10 +3,12 @@
 function makeTable(elem){
 	// 테이블 태그 생성
 	var $table = $("<table border=1>");
-	
-	//컬럼 정의하기 // 제목들 넣기
+
+
+	//컬럼 정의하기
 	for(var i =0; i<1;i++){
 		var $tr=$("<tr>");
+
 		for(var j=0; j<elem.eq(0).children().length;j++){
 			var $td=$("<td>").append(elem.eq(0).children().eq(j).prop("tagName"));
 			$tr.append($td);
