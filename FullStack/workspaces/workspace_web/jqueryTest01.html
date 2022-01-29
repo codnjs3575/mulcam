@@ -45,11 +45,14 @@
 		// 문제 1
 		$('button:eq(0)').click(function(){
 			$('.bgSpan:eq(0)').text('ABCDEF')
+			// $('div:eq(0)').children('span').html('ABCDEF')
 		});
 
 		// 문제 2
 		$('button:eq(1)').click(function(){
 			$('.bgSpan:eq(2)').css('background-color','skyblue')
+			// !강사님 태그
+			// $('div:eq(0)').children('span').eq(1).css('background-color','skyblue')
 		});
 
 		// 문제 3
@@ -57,11 +60,14 @@
 			$('#allChk').children('input').each(function(){
 				this.checked = false;
 			})
+			// !강사님 코드
+			// $("#allChk input:checkbox").removeAttr('checked');
 		});
 
 		// 문제 4
 		$('button:eq(3)').click(function(){
-			$('select:eq(0)').children().eq(1).prop('selected',true)
+			// $('select:eq(0)').children().eq(1).prop('selected',true)
+			$('select:eq(0)').children().eq(1).attr('selected',true)
 		});
 
 		// 문제 5
@@ -95,6 +101,7 @@
 					$(this).wrap('<b></b>')
 				}
 			});
+			//$('div:eq(8)').children(':contains(bold)').css
 		});
 
 		// 문제 10
