@@ -9,6 +9,7 @@ def bin_search(arr,fData):
 
     while start <= end :
         mid = (start + end) // 2
+        print(mid)
         if arr[mid] == fData :
             return mid
         elif fData > arr[mid] :
