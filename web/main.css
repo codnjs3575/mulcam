@@ -7,9 +7,6 @@
     width:100%;
     height: 100%;
 }
-#main{
-    border: 1px solid red;
-}
 /*---------------header------------- */
 @media(max-width: 1800px){
     .head{
@@ -58,9 +55,6 @@
 }
 /*----------head--media------------- */
 @media (max-width: 950px) {
-    .everytime {
-      background-color: tomato;
-    }
     #logo{
         position:fixed; left:100px; top:25px;
     }
@@ -102,8 +96,7 @@
 /*----------submenu/body----------- */
 @media(max-width: 1800px){
     .body{  
-        height: 5000px;
-        border: 1px dotted #c62917;
+        height: 1700px;
         color:black;
         margin-bottom: 80px;
         position: relative;
@@ -151,7 +144,7 @@
         position: absolute;
         left:150px;
         width:180px;
-        height:4000px;
+        height:1000px;
     }
     #user_info{
         border : 0.5px solid #d6d6d6;
@@ -222,12 +215,12 @@
     position: absolute;
     left:960px;
     width:300px;
-    height: 4000px;
+    height: 1000px;
 }
 #serach{
     width:100%;
     height: 40px;
-    border: 2px solid #d6d6d6;
+    border: 1.5px solid #d6d6d6;
     font-size:14px;
     background-image: url(/web/imgs/serach.png);
     background-repeat: no-repeat;
@@ -235,6 +228,7 @@
     background-position-x: right;
 }
 .right_board{
+    border: 0.5px solid #d6d6d6;
     margin-top:5px;
     background-color: #f9f9f9;
     /* padding:5px; */
@@ -243,39 +237,54 @@
 .caph3{
     color:#3744a5;
     padding:8px;
-    font-size:14px;
-    font-weight: 700;
-    border: 0.5px solid #d6d6d6;
+    font-size:13px;
+    font-weight: 750;
+    
+}
+.moretext{
+    position: absolute;
+    font-size:12px;
+    font-weight: 400;
+    color:#a6a6a6;
+    left:250px;
+    /* margin-right:5px; */
 }
 
 .content{
-    padding:8px;
-    padding-right: 100px;
-    /* width: 100px; */
-    height: 25px;
+    float:left;
+    position: absolute;
+    padding-left:10px;
+    padding-top: 5px;
+    width: 210px;
+    height: 20px;
     font-weight: 350;
     font-size: 14px;
-    border: 0.2px solid #d6d6d6;
-    border-top: none;
     overflow: hidden;
     /* display:inline-block; */
 }
 .board_hot{
+    padding-top:6px;
+    padding-bottom:7px;
+    width: 298px;
+    border-top: 1px solid #d6d6d6;
     height: 25px;
 }
 .board_hot:hover{
     background-color: white;
 }
 .time{
+    position: absolute;
+    padding-top:8px;
+    /* margin-top: 10px; */
+    left:235px;
     display: inline-block;
     font-size: 9px;
-    margin-left:150px;
+    /* margin-left:150px; */
     color:#a6a6a6;
 }
 .article{
     background-color: #f9f9f9;
-    border: 1px solid #d6d6d6;
-    border-top: none;
+    border-top: 1px solid #d6d6d6;
     padding:3px;
 }
 .article:hover{
@@ -306,18 +315,11 @@
     margin-bottom:10px;
     color:#a6a6a6;
     display: inline-block;
-
 }
 .right_caption{
     display: inline-block;
 }
-.moretext{
-    font-size:13px;
-    font-weight: 500;
-    color:#a6a6a6;
-    margin-left:169.5px;
-    /* margin-right:5px; */
-}
+
 .num01{
     display :inline-block;
     color:#c62917;
@@ -331,12 +333,42 @@
     font-size:11px;
     margin-left:5px;
 }
+.article_title{
+    font-size:13px;
+    font-weight: bold;
+}
+.article2{
+    border-top: 1px solid #d6d6d6;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-right: 10px;
+}
+.star{
+    /* padding-left: 5px; */
+    height: 20px;
+    background-image: url(/web/imgs/star.png);
+    background-repeat: no-repeat;
+    background-size: 70px;
+}
+.star2{
+    height: 20px;
+    background-image: url(/web/imgs/star2.png);
+    background-repeat: no-repeat;
+    background-size: 70px;
+}
+.common_text2{
+    padding-top: 5px;
+    font-size: 12px;
+    height: 50px;
+    overflow: hidden;
+    color: #737373;
+}
 /*-----------banner--------------- */
 #banner{
     position: absolute;
     /* margin-right: 150px; */
-    left:360px;
-    width:570px;
+    left:350px;
+    width:595px;
     height: 170px;
 }
 
@@ -344,9 +376,127 @@
 #main{
     position: absolute;
     top:420px;
-    left:360px;
-    width:570px;
-    height:4000px;
+    left:350px;
+    width:605px;
+    /* height:1000px; */
+}
+.card{
+    float:left;
+    margin-right:10px;
+    margin-bottom: 10px;
+    border:1px solid #e3e3e3;
+    width: 290px;
+    height: 188px;
+}
+.main_caption{
+    width: 290px;
+    height: 15px;
+    font-size: 14px;
+    padding : 10px;
+    color:#c62917;
+    font-weight: bold;
+}
+.main_content{
+    display: inline-block;
+    font-size: 13px;
+    padding : 8px;
+    padding-left: 10px;
+    width: 200px;
+    height: 10px;
+    overflow: hidden;
+    
+}
+.main_moretext{
+    /* align-self: right; */
+    position: relative;
+    font-size:11px;
+    font-weight: 400;
+    color:#a6a6a6;
+    top:-2px;
+}
+.main_small_text{
+    font-size: 11px;
+    font-weight: 500;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:10px;
+    color:#a6a6a6;
+    display: inline-block;
+}
+.main_article{
+    padding-top: 3px;
+    width: 290px;
+    height: 35px;
+    border-top: 1px solid #e3e3e3;
+}
+.main_article2{
+    padding-top: 3px;
+    width: 290px;
+}
+.article3{
+    height: 62px;
+    padding: 5px;
+    border-top: 1px solid #e3e3e3;
+    /* padding: 10px; */
+}
+.article3:hover{
+    background-color: #f9f9f9;
+}
+.main_article:hover{
+    background-color: #f9f9f9;
+}
+.common_text3{
+    font-size: 13px;
+    height: 30px;
+    overflow: hidden;
+    padding:6px;
+}
+.bookstore{
+    position: absolute;
+    top:1000px;
+    width: 600px;
+    height: 270px;
+}
+.book{
+    float: left;
+    border:1px solid #f2f2f2;
+    width: 143px;
+    margin-right: 5px;
+    height: 270px;
+}
+.book:hover{
+    background-color: #f9f9f9;
+}
+.book_img{
+    /* border:1px solid red; */
+    height: 190px;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+.book_name{
+    height: 50px;
+    padding-top:10px;
+    padding-left:10px;
+    font-size:14px;
+}
+.book_price{
+    height: 20px;
+    color: #c62917;
+    font-size:12px;
+    padding-left: 8px;
+    
+}
+#book_img1{
+    background-image: url(/web/imgs/book1.png);
+}
+#book_img2{
+    background-image: url(/web/imgs/book2.png);
+}
+#book_img3{
+    background-image: url(/web/imgs/book3.png);
+}   
+#book_img4{
+    background-image: url(/web/imgs/book4.png);
 }
 /*---------------footer------------- */
 @media(max-width: 1800px){
