@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루에 얼마나 강의를 들어야할까?</title>
+    <script>
+        function calculate(){
+                var today = new Date()
+                var dday = new Date(document.getElementById("dday").value)
+                console.log(dday.getTime())
+                console.log(today.getTime())
+                var diff = dday.getTime() - today.getTime()
+                console.log(diff)
+            }
+
+    </script>
+
+
+</head>
+<body>
+    <div>
+        <br>
+        <input type="date" id="dday"> 디데이 날짜 입력
+        <br>
+        <br>
+        <input type="text" id="subN"> 과목 개수 입력
+        <br>
+        <br>
+        <button onclick="calculate()">계산하기</button>
+    </div>
+    <div id="result">
+
+    </div>
+
+</body>
+</html>

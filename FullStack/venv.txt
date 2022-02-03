@@ -1,0 +1,77 @@
+# 가상환경
+# 1. virtual environments (venv)
+python -m venv (가상환경 이름)
+
+# venv 실행
+# max
+source ??/bin/activate
+
+
+# 2. conda 가상환경
+- 가상환경 만들기
+conda create -n myweb python=3.9
+
+# To activate this environment, use
+      - myweb이라는 가상환경에 들어옴
+#     $ conda activate myweb 
+
+# To deactivate an active environment, use
+
+#     $ conda deactivate
+
+- 가상환경변수 확인
+conda info --env => /Users/chaewon/opt/anaconda3/envs/myweb
+
+- 장고 설치
+pip install django
+
+- 폴더 경로 
+cd /Users/chaewon/Documents/multicampus/파이썬/PythonStudy/mulcam/FullStack/workspaces_django
+
+- 장고 mysite 폴더 생성
+django-admin startproject mysite
+
+cd mysite
+python manage.py runserver
+
+django-admin startproject hello
+cd hello
+python manage.py runserver
+python manage.py startapp hello01
+
+
+
+
+
+command 1 -> 프로젝트 닫기
+command n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
