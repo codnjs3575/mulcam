@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var/index</title>
+</head>
+<body>
+    <!-- /var/var01/   -->
+    <a href="var01/">var01</a>
+    <br>
+    <a href="/var/var02/">var02</a>
+    <br>
+    <a href="forloop/">for문</a>
+    <br>
+    <a href="if01/">if01</a>
+    <br>
+    <a href="if02/">if02</a>
+    <br>
+    <a href="href/">href</a>
+    <br>
+
+    <!-- get  -->
+    <a href="request/">get</a>
+    <br>
+
+    <!-- post : <form> -->
+    <form action="request/" method="post">{% csrf_token %} <!--csrf -->
+        <input type="submit" value="post"/>
+    </form>
+    <!-- csrf : cross-site request forgery-->
+
+</body>
+</html>

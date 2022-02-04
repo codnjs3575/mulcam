@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     # path 뒤에 , 필수
+    # 요청이 들어오면 요청에 맞는 처리를 ~가 해줌
     path('admin/', admin.site.urls),
     path('',views.index), # 아무것도 안 들어오면 views의 index로 연결.
     path('hello01/',include('hello01.urls')),

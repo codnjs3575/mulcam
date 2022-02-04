@@ -1,0 +1,129 @@
+create database study;
+use study;
+show tables;
+
+create table students(
+	id int,
+	name varchar(100),
+	phone char(13),
+	address varchar(1000)
+);
+select (컬럼명(엔티티명))
+from (테이블명)
+
+select * from students;
+
+insert into (테이블명)(칼럼명)
+values(값1, 값2, 값3, 값4)
+
+insert into students
+value(1,'김채원','010-1111-1111','서울');
+
+insert into students
+value(2,'정진한','010-2222-2222','대구');
+
+insert into students
+value(3,'홍지수','010-3333-3333','서울');
+
+select * from (테이블명);
+
+select (컬럼명) 
+from (테이블명)
+where (조건식); --관계대수 
+
+select name from students;
+
+select *
+from students
+where 컬럼명 (연산식);
+
+select *
+from students
+where address = '서울' or name='정진한'
+limit 100;
+
+*김* - 김ㅇㅇ ㅇ김ㅇ ㅇㅇ김
+김* - 김ㅇㅇㅇㅇ, 김ㅇㅇ
+
+update 테이블명
+set 컬럼명1 = 변경할 값1,
+컬럼명2 = 변경할 값2,
+컬럼명3 = 변경할 값3
+where 컬럼명 (조건식);
+
+update students
+set age = 20
+where id = 1;
+
+update students
+set age = 18
+where id = 2;
+
+update students
+set age = 19
+where id = 3;
+
+alter table (테이블명)
+add (컬럼명) (속성);
+
+alter table students
+add age int;
+
+select (컬럼명)
+from (테이블명)
+order by (기준 컬럼명) (생략/asc/desc)
+
+select *
+from students
+order by age desc,id asc;
+
+source employees.sql
+
+select hire_date
+from employees
+where month(hire_date) = 12
+limit 50;
+
+select emp_no,hire_date
+from employees
+where day(hire_date) = 20
+limit 10;
+
+update employees
+set hire_date = '2021-02-03 11-32-10'
+where emp_no = 10013 or emp_no = 10026;
+
+select emp_no,hire_date
+from employees
+where emp_no = 10013;
+
+select emp_no,hire_date
+from employees
+where hour(hire_date) = 11
+limit 50;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
