@@ -3,7 +3,6 @@
 # 2. 리스트 곱하기 : * (반복)
 # 3. 리스트 내용 변경
 
-
 fruits = ['apple','banana','melon']
 a = [1, 'apple', 3.5, [10,20,30], True]
 
@@ -42,17 +41,24 @@ b[0] = 0.5
 print('a: %s \nb: %s'%(a,b))
 print('-----------------------------')
 
-# 2. 깊은 복사 (deep cody) : 리스트 복사본을 새로 생성하여 반환
+# 2. 깊은 복사 (deep copy) : 리스트 복사본을 새로 생성하여 반환
 # list() 함수 또는 copy모듈의 deepcopy() 함수 사용
+
 # 2-1. list() 함수
 a = [1,2,3,4]
 c=list(a)
+d=a
+print(c)
+print(d)
+print(id(a[0]),id(c[0]))
 print('바뀌기 전 c :',c)
-c[0] = 'apple'
+a[0] = 'apple'
+c[-1] = '!!'
 
 print('바뀐 뒤 a :',a)
 print('바뀐 뒤 c :',c)
 print('-----------------------------')
+
 # 2-2. copy모듈의 deepcopy() 함수
 import copy
 
