@@ -5,6 +5,8 @@ msg = input().replace('\n','')
 new = []
 count = 0
 for x in msg:
+    # isdigit-> 모든숫자형태
+    # isdecimal -> 0~9사이 숫자
     if x.isdigit():
         new.append(x)
 new = int(''.join(new))
