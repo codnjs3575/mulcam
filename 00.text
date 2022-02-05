@@ -4,6 +4,13 @@ git commit -m "algorithm chap07 update"
 # 반드시 챕터명 수정해야 함
 --------------------------------------
 
+----------인프런 section ? 올리기----------
+git add ./inflearn/
+git commit -m "section 02~04 update" 
+# 반드시 챕터명 수정해야 함
+--------------------------------------
+
+
 git push -u origin master --force
 : 강제 푸쉬
 
