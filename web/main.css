@@ -413,6 +413,7 @@
     font-weight: 400;
     color:#a6a6a6;
     top:-2px;
+    /* left:30px; */
 }
 .main_small_text{
     font-size: 11px;
@@ -482,6 +483,7 @@
 .book_price{
     height: 20px;
     color: #c62917;
+    /* color: hotpink; */
     font-size:12px;
     padding-left: 8px;
     
