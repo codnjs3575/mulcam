@@ -1,0 +1,6 @@
+{"ins_lat": "37.6242176",
+"ins_lng": "127.0710272",
+"p_sido_cd": sido_code,
+"p_gugun_cd": gugun_code,
+"in_biz_cd": '',
+"set_date":'',})
