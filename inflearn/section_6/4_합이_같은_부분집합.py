@@ -1,5 +1,4 @@
 """
-----------
 {1,2,3,4}
 {1}{2,3,4}
 {1,2}{3,4}
@@ -8,20 +7,27 @@
 {1,2,3}{4}
 {1,2,4}{3}
 {1,3,4}{2}
-----------
-{1} 고정 후 2,3,4 경우의 수
-23, 24, 2, 34, 3, 4
 """
+
 import sys
 sys.stdin = open('input.txt','r')
 
-def DFS(arr):
-    print(arr[1:])
-    new_arr = []
-    sum = 0
-
+def DFS(L,sum):
+    if sum > total//2 :
+        return
+    if L == N :
+        if sum == (total-sum):
+            print("YES")
+            sys.exit(0) # 프로그램 종료
+    else :
+        DFS(L+1, sum+arr[L])
+        DFS(L+1, sum)
 
 if __name__ == "__main__":
     N = int(input())
     arr = list(map(int,input().split()))
-    DFS(arr)
+    total = sum(arr)
+
+    DFS(0,0)
+
+    print("NO")
