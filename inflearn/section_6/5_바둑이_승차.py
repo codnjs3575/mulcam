@@ -5,8 +5,6 @@ def DFS(count,sum,tsum):
     global maxnum,total
     if sum +(total-tsum) < maxnum : return
     if sum > C : return
-
-
     if count == N :
         if sum >= maxnum :
             maxnum = sum
